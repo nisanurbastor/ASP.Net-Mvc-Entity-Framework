@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "All Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<style>
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+    }
+    .img_text1{
+        text-align:center;
+        color:#996633;
+        font-family:Rockwell;
+    }
+    .img_text2{
+        text-align:center;
+        color:black;
+        font-family:Rockwell;
+    }
+    .container {
+  display: flex;
+  
+}
+
+a {
+  flex: 1;
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  line-height: 3;
+  color: black;
+}
+
+a:link,
+a:visited,
+a:focus {
+  background: #5c8a8a;
+  color: black;
+}
+
+a:hover {
+  background: #996633;
+}
+
+a:active {
+  background: darkred;
+  color: black;
+}
+ </style>
+
+
+
+<div class="container" style="margin:100px">
+    <div class="row justify-content-md-center">
+    @foreach(var item in Model)
+    {
+            <div class="col-sm-3" style="margin-top:30px; height:400px;">
+                <div class="card">
+                    <div class="card-body">
+                    <div class="img-fluid">
+                        <img src="~/images/@item.PictureURl" width="100px" height="auto" class="center">
+                    </div>
+                    </div>
+                   <div class="card-footer"> 
+                    <h3 class="img_text1">
+                         @item.Brand @item.ProductID @item.Shape
+                     <br>
+                        @item.Color
+                    </h3>
+
+                     <h5 class="img_text2">
+                         $ @item.Price
+                     </h5>
+                     </div>
+                 </div>
+             </div>
+    }
+    </div>
+    
+</div>
+<div class="container" style="width:200px">
+    <a asp-controller="Product" asp-action="Create" style="margin-top:50px; margin-bottom:100px;">
+       <p style="color:white">Back to Edit Page</p>
+    </a>
+</div>

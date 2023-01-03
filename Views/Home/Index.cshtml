@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .carousel-inner{
+        width:1200px;
+    }
+</style>
+<body>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="~/images/5.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="~/images/blackfriday2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="~/images/6.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="~/images/maxresdefault.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+        <div class="text1">
+        <h1 style="color:#F85454; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;padding:20px; margin-bottom:0px; font-size:50px;">HN Guitars</h1>
+            <p class ="solid">
+               It’s one of the online guitar shops, founded in 2022, we have been deeply involved in the guitar field for many years. We have popular brands such as Gibson, Fender, PRS, etc. We’re a professional musical instrument supplier.
+               As an online guitar shop, we have advanced technology and equipment, mature production workers and a complete production system, professional management of products, rigorous production process, and multiple quality
+               inspection procedures. We have approximately 50,000 guitars in stock to ensure transportation efficiency. We give priority to providing high-quality products, immediate services and competitive prices to customers all over the world.
+           </p>
+        </div>
+
+    <div class="cards">
+        <div class="card" style="width: 34rem;">
+                <img src="~/images/ad.jpg" class="card-img-top" alt="~/images/ad.jpg">
+            <div class="card-body">
+                <h5 class="card-title">Fender Guitars</h5>
+                <p class="card-text">Choose your stratocaster, telecaster or jazzmaster</p>
+                <a asp-controller="Home" asp-action="Fender" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 34rem;">
+                <img src="~/images/gibson.jpg" class="card-img-top" alt="~/images/gibson.jpg">
+            <div class="card-body">
+                <h5 class="card-title">Gibson Guitars</h5>
+                <p class="card-text"> View all the les pauls models 50% off now</p>
+                <a asp-controller="Home" asp-action="Gibson" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+        </div>
+    <div class="text2">
+        <h1 class="title2" style="color:#F85454; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;padding:20px; margin-bottom:0px; font-size:50px;"> About Us</h1>
+        <p class="solid">
+Now is a great time to get back into, or to start playing music! Gibson is offering a personalized VGT Service for any player who wants to self-service their instrument. But unlike online instructional videos, you won’t be all alone;
+the VGT service provides you with real-time, interactive assistance from an experienced technician to help guide you through the process. This is done through FREE online one-on-one video conference calls. We can assist you with your Gibson,
+Fender, Ibanez, electric, classic, acoustic or bass guitars.
+        </p>
+    </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
